@@ -33,7 +33,7 @@ public class DriverManager {
     }
 
     public void navigateTo() {
-        driver.get("http://todomvc.com/examples/react/#/");
+        driver.get("https://todomvc.com/examples/react/dist/");
     }
 
     public void closeBrowser() {
