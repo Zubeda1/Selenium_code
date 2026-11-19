@@ -1,7 +1,7 @@
 package com.react.pages;
 
 import com.react.driver.DriverManager;
-import org.junit.Assert;
+import org.hamcrest.MatcherAssert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -33,7 +33,7 @@ public class HeaderPage extends DriverManager {
 
     public boolean searchItem() {
         String actual = "london deals";
-        Assert.assertThat(actual, is(equalToIgnoringCase("London Deals")));
+        MatcherAssert.assertThat(actual, is(equalToIgnoringCase("London Deals")));
         return true;
     }
 }

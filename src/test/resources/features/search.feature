@@ -10,3 +10,4 @@ Feature:search
   And I open the URL on the browser
   When I search for item
   Then I should  view the item
+
