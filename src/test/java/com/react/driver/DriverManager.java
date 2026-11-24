@@ -13,10 +13,6 @@ public class DriverManager {
     public static WebDriver driver;
     private String browser = "chrome";
 
-    public DriverManager() {
-        PageFactory.initElements(driver, this);
-    }
-
     public void runOnChrome() {
         switch (browser) {
             case "chrome":
@@ -26,6 +22,8 @@ public class DriverManager {
             default:
                 driver = new FirefoxDriver();
         }
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        PageFactory.initElements(driver, this);
     }
 
     public void applyImplicitWait() {

@@ -7,6 +7,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
 
 import static org.hamcrest.Matchers.equalToIgnoringCase;
 import static org.hamcrest.Matchers.is;
@@ -17,6 +18,7 @@ public class HeaderPage extends DriverManager {
     private WebElement searchTextBox;
 
     public void searchSomething() {
+        PageFactory.initElements(driver, this);
         searchTextBox.sendKeys("london deals");
         searchTextBox.sendKeys(Keys.RETURN);
         applyImplicitWait();

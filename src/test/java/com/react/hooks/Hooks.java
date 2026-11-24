@@ -10,9 +10,6 @@ public class Hooks {
 
     @Before
     public void setUp() {
-        driverManager.runOnChrome();
-        driverManager.navigateTo();
-        driverManager.applyImplicitWait();
     }
 
     @After
